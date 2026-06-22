@@ -1,0 +1,28 @@
+# Build output
+build/
+_build/
+docs/build/
+
+# Sphinx cache
+.doctrees/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+.ENV/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor / OS noise
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+
+# Nested clone, not part of this project
+phone-docs/

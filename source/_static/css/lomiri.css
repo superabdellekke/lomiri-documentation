@@ -1,0 +1,297 @@
+/* Lomiri documentation custom styles, modeled on the UBports documentation theme. */
+
+/* Import Ubuntu fonts. The font files live in _static/font/ — drop
+   Ubuntu-Light.ttf, Ubuntu-Bold.ttf and UbuntuMono-Regular.ttf in there to
+   enable the original look. If the files are missing, browsers fall back to
+   the system sans-serif, which is acceptable but not pixel-identical. */
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url('../font/Ubuntu-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url('../font/Ubuntu-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntu-mono';
+  src: url('../font/UbuntuMono-Regular.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Content style */
+html {
+    scrollbar-color: var(--color-foreground-border) var(--color-sidebar-background);
+}
+
+.main {
+    margin-right: 50px;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.content img {
+    border-radius: .2rem;
+}
+
+table {
+    width: 100%;
+}
+
+blockquote {
+    font-style: none;
+}
+
+h4, h5, h6 {
+    text-transform: none;
+}
+
+/* override table width restrictions */
+.wy-table-responsive table th
+, .wy-table-responsive table td
+{
+    /* !important prevents the common CSS stylesheets from
+       overriding this as on RTD they are loaded after this stylesheet */
+    white-space: normal !important;
+}
+
+.wy-table-responsive
+{
+    overflow: visible !important;
+}
+
+/* Section spacing */
+.section {
+    margin-top: 3rem;
+}
+
+.section .section .section {
+    margin-top: 2rem;
+}
+
+.section .section .section .section {
+    margin-top: 1rem;
+}
+
+/* Hidden elements */
+.headerlink, .injected {
+    display: none;
+}
+
+/* Bold */
+.content h1, .content h2, .content h3, .custom-edit-container > p, .bold {
+    font-weight: 800;
+}
+
+/* Primary color */
+a.current, .content h1, .toc-tree li.scroll-current > .reference {
+    color: #77216F !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    a.current, .content h1, .toc-tree li.scroll-current > .reference {
+        color: #AD7AA9 !important;
+    }
+}
+
+/* Left sidebar */
+.sidebar-brand {
+    padding-top: 0;
+}
+
+.sidebar-logo {
+    max-height: 170px;
+}
+
+.sidebar-logo-container {
+    margin-top: 0;
+}
+
+.sidebar-search-container {
+    background: transparent !important;
+}
+
+.sidebar-search-container::before {
+    display: none;
+}
+
+.sidebar-search {
+    background-color: var(--color-sidebar-search-background);
+    border-left: 1px solid var(--color-sidebar-search-border);
+    border-radius: 20px 0 0 20px;
+}
+
+.sidebar-tree .caption {
+    font-weight: unset;
+    text-transform: unset;
+    color: var(--color-sidebar-link-text--top-level);
+}
+
+.sidebar-drawer {
+    width: unset !important;
+}
+
+.sidebar-container {
+    margin-left: 50px;
+}
+
+/* Edit this page styles */
+.custom-edit-this-page {
+    width: 200%;
+    background-color: var(--color-sidebar-background);
+    border-radius: 20px 0 0 20px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.custom-edit-container {
+    width: calc(15em - 60px);
+    padding: 30px;
+}
+
+.custom-edit-container > p {
+    color: var(--color-toc-item-text);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.custom-edit-container .muted-link {
+    color: var(--color-toc-item-text);
+    background-color: var(--color-background-primary);
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+.custom-edit-container .muted-link:hover {
+    color: var(--color-background-primary);
+    background-color: var(--color-content-foreground);
+    text-decoration: none;
+}
+
+/* Language list */
+
+.lang-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-gap: 7px;
+    padding-left: 0;
+}
+
+.lang-list > li > p > a {
+    display: block;
+    color: var(--color-content-foreground);
+    background-color: var(--color-sidebar-background);
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 5px 20px;
+    transition: all .5s;
+}
+
+.lang-list > li > p > a:hover {
+    color: var(--color-background-primary);
+    background-color: var(--color-content-foreground);
+}
+
+/* Social css from devices */
+.ext-link-icon {
+  width: 30px;
+}
+
+.footer-links {
+    color: var(--color-toc-item-text);
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    left: calc(50% + 8px);
+    transform: translateX(-50%);
+    width: 15em;
+}
+
+.footer-links > p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-links > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links > ul > li {
+    margin: 5px;
+    display: inline-block;
+}
+
+.footer-links img {
+    display: block;
+    transition: all .5s;
+    -webkit-filter: invert(50%); /* safari 6.0 - 9.0 */
+    filter: invert(50%);
+}
+
+.footer-links img:hover {
+    -webkit-filter: invert(0%); /* safari 6.0 - 9.0 */
+    filter: invert(0%);
+}
+
+/* Dark color scheme */
+
+@media (prefers-color-scheme: dark) {
+    .footer-links img {
+        -webkit-filter: invert(30%); /* safari 6.0 - 9.0 */
+        filter: invert(30%);
+    }
+
+    .footer-links img:hover {
+        -webkit-filter: invert(70%); /* safari 6.0 - 9.0 */
+        filter: invert(70%);
+    }
+
+    .invert-grayscale img, img.invert-grayscale {
+        filter: invert() grayscale();
+    }
+
+    .invert-color img, img.invert-color {
+        filter: invert();
+    }
+}
+
+/* Disable border radius on smaller displays */
+@media (max-width:82em) {
+    .custom-edit-this-page {
+        border-radius: 0;
+    }
+}
+@media (max-width:90em) {
+    .sidebar-search {
+        border-radius: 0;
+    }
+
+    .sidebar-container {
+        margin-left: 0;
+    }
+
+    .main {
+        margin-right: 0;
+    }
+}
+
+/* Wider sidebars on wider screens */
+@media (min-width:82em) {
+    .sidebar-container {
+        width: 17em;
+    }
+}
