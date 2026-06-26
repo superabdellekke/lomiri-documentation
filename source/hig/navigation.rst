@@ -41,7 +41,6 @@ Lomiri apps use two navigation models. Most real apps combine them, but it helps
 **Header sections** switch between views of equal importance, none of them inside another. Use them when the views are peers, such as All, Recent, and Archive in an inbox. This is sometimes called flat navigation, because a person moves sideways between screens rather than deeper into anything.
 Header sections are described in full below.
 
-.. figure:: /_static/images/screenshot20260623_134838823.png
 
 The page stack drills down into a hierarchy and back out again. Use it when one screen contains or leads to another, such as a list, and one item from that list, then a detail of that item. This is sometimes called deep navigation, because each screen sits one level further in and the back button walks the person out again. The page stack is described in full below.
 

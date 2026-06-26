@@ -103,7 +103,7 @@ system instead of your app, which means the person tries to use your feature and
 positioned too close to the edge, not too sensitive on the system's part.
 
 .. figure:: /_static/images/screen-switcher.png
-  :width: 75%
+  :width: 50%
 
 This rule also has a quieter implication for navigation design. Because the right edge already shows a spread of open apps as a stack of cards, your own app should not build a similar nested stack of
 of screens inside itself. Doing so creates a second card-stack metaphor that competes with the system's, which is confusing rather than familiar. The full reasoning for this is on the :doc:`navigation` page.

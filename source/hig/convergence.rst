@@ -52,6 +52,8 @@ An app lives in a window (in a windowed, desktop-like environment) or a surface 
 On a small surface, such as a phone, a single panel is shown at a time. The person moves between panels by tapping into tiems and using the back button, exactly the page stack described in :doc:`navigation`. As the window or surface grows, the app can show two or more panels side by side instead, so related content is visible at once and the person navigates less. Contacts, messages, and email apps are typical examples: a list and a detail view that sit on seperate pages
 on a phone become two panels side by side on a desktop.
 
+.. figure:: /_static/images/displays-combined.png
+  :width: 90%
  
 The platform provides a way to build this kind of adaptive, multi-column layout that tracks how many columns can be shown at once and automatically switches between, for example, a one-panel and a two-panel arrangement as the person resizes
 the window. When panels are joined and the window is resized, it is normally the trailing panel that resizes while the leading panel keeps its dimensions. You specify where panels should go and the width at which they are allowed to expand, as the layout places them for you.
