@@ -41,6 +41,8 @@ Lomiri apps use two navigation models. Most real apps combine them, but it helps
 **Header sections** switch between views of equal importance, none of them inside another. Use them when the views are peers, such as All, Recent, and Archive in an inbox. This is sometimes called flat navigation, because a person moves sideways between screens rather than deeper into anything.
 Header sections are described in full below.
 
+.. figure:: /_static/images/screenshot20260623_134838823.png
+
 The page stack drills down into a hierarchy and back out again. Use it when one screen contains or leads to another, such as a list, and one item from that list, then a detail of that item. This is sometimes called deep navigation, because each screen sits one level further in and the back button walks the person out again. The page stack is described in full below.
 
 The distinction is worth keeping in mind because it tells you which mechanism to reach for. Peer relationships call for header sections, and containment relationships call for the page stack.
@@ -57,7 +59,7 @@ There's a few guidelines on how to use it:
 - Navigation lives at the leading edge (a back button, or a drawer holding the app's main views when they do not all fit). The leading edge is the start of the reading direction: the left in a left-to-right language such as English, the right in a right-to-left language such as Arabic.
 - Actions live at the trailing edge (such as search or settings), with the most important ones surfaced directly and the rest moved into an action drawer only when there is no room. 
 - Do not use a navigation drawer and an action drawer at the same time. A person is unlikely to tell them apart, and the two compete for the same corners. 
-- Place negative or destructive actions at the leading edge and positive actions at the trailing edge, consistently, so muscle memory carries from one app to the next. This mirrors the color-and-position rules in :doc:`principles`.
+- Place negative or destructive actions at the leading edge and positive actions at the trailing edge, consistently, so muscle memory carries from one app to the next. 
 
 Describe positions as leading and trailing rather than left and right, and anchor your components to those edges rather than hardcoding a side. An app that hardcodes "back on the left" is broken for every right-to-left language, even though it looks correct in English.
 

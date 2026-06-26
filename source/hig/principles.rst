@@ -33,6 +33,9 @@ than to interaction. on a small screen, information is folded into a compact, de
 In practice, Suru mean sharp, deliberate lines; a clear and limited use of transparency; and the sense that every element was placed on purpose rather than left where it landed. An app that uses Suru's visual language 
 consistently and follows the content-first principle should be recognisable as a Lomiri app even from a distance, without needing to see a logo.
 
+.. figure:: /_static/images/suru_mood_board.png
+  :width: 60%
+
 One family
 -----------
 

@@ -7,6 +7,9 @@ which gestures belong to the system, which belong to your app, and the rules tha
 Two kinds of gestures 
 ---------------------
 
+.. figure:: /_static/images/gestures.png
+  :width: 75%
+
 Every gesture in Lomiri falls into one of two groups, and the difference between them matters more than anything else on this page.
 
 **System gestures** start at one of the four edges of the screen and are handled by the shell, not by your app. They behave identically in every application, so a person only has to learn them once.
@@ -61,6 +64,9 @@ In-app gestures
 ----------------
 
 Inside your own content, use gestures with the meaning people already expect from the rest of the system. Inventing a new meaning for a familiar gesture works against existing guidelines, so we recommend that you do not do so.
+
+.. figure:: /_static/images/gesture-diagram.png
+  :width: 75%
 
 .. list-table::
     :header-rows: 1
@@ -119,12 +125,20 @@ Bottom edge hints
 The bottom edge has a built-in, two-stage hint, so for that gesture you usually do not need to add anything of your own. When your app is first launched, the user sees a small floating icon: this is Hint 1.
 After the user interacts with it, the hint morphs into Hint 2, which shows a label, an icon, or both, giving more detail about what the bottom edge will reveal, such as "+ New page". See :doc:`bottom-edge` for the full behavior.
 
+.. figure:: /_static/images/bottom-edge-1.png
+  :width: 69%
+k
 +++++++++++++++
 Coach marks
 +++++++++++++++
 
+
+
 Use a coach mark as a single instructional overlay that points out one interaction that is not obvious or naturally discoverable. A coach mark should look visually distinct from your app's normal interface, so it is 
 clearly a temporary hint and not a permanent part of the screen. Show one interaction at a time, at the moment it becomes useful, rather than explaining everything at once.
+
+.. figure:: /_static/images/coachmark.png
+  :width: 60%
 
 +++++++++++++++
 Tutorials

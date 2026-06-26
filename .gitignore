@@ -26,3 +26,6 @@ Thumbs.db
 
 # Nested clone, not part of this project
 phone-docs/
+
+# Local review notes, not part of the published docs
+HIG-REVIEW.md
