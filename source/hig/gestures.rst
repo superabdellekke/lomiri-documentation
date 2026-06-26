@@ -6,10 +6,6 @@ which gestures belong to the system, which belong to your app, and the rules tha
 
 Two kinds of gestures 
 ---------------------
-
-.. figure:: /_static/images/gestures.png
-  :width: 75%
-
 Every gesture in Lomiri falls into one of two groups, and the difference between them matters more than anything else on this page.
 
 **System gestures** start at one of the four edges of the screen and are handled by the shell, not by your app. They behave identically in every application, so a person only has to learn them once.
@@ -18,6 +14,11 @@ Your app does not own these gestures and must never assign its own meaning to a 
 **In-app gestures** happen inside your content area. These are yours to use, with their familiar, expected meaning. A tap selects something, a pinch zooms, and so on.
 
 The reason this split exists comes straight from the content-first principle. The center of the screen belongs to your content, and the four edges belong to the system. As long as your app respects that boundary, it can never collide with the platform it runs on.
+
+
+.. figure:: /_static/images/gestures.png
+  :width: 75%
+
 
 The four system edges
 ---------------------
@@ -65,9 +66,6 @@ In-app gestures
 
 Inside your own content, use gestures with the meaning people already expect from the rest of the system. Inventing a new meaning for a familiar gesture works against existing guidelines, so we recommend that you do not do so.
 
-.. figure:: /_static/images/gesture-diagram.png
-  :width: 75%
-
 .. list-table::
     :header-rows: 1
     :widths: 30 70
@@ -93,12 +91,19 @@ Inside your own content, use gestures with the meaning people already expect fro
     * - Pull down from the top of a list
       - Refresh the contents of that list.
 
+.. figure:: /_static/images/gesture-diagram.png
+  :width: 75%
+
+
 Never collide with the edges
 ------------------------------
 
 If your app needs a horizontal swipe of its own, keep that interaction away from the very edges of the screen. A swipe that starts close enough to the screen will be caught by the
 system instead of your app, which means the person tries to use your feature and accidentally opens the launcher or switches apps instead. If that happens during testing, the gesture is
 positioned too close to the edge, not too sensitive on the system's part.
+
+.. figure:: /_static/images/screen-switcher.png
+  :width: 75%
 
 This rule also has a quieter implication for navigation design. Because the right edge already shows a spread of open apps as a stack of cards, your own app should not build a similar nested stack of
 of screens inside itself. Doing so creates a second card-stack metaphor that competes with the system's, which is confusing rather than familiar. The full reasoning for this is on the :doc:`navigation` page.
@@ -127,7 +132,7 @@ After the user interacts with it, the hint morphs into Hint 2, which shows a lab
 
 .. figure:: /_static/images/bottom-edge-1.png
   :width: 69%
-k
+
 +++++++++++++++
 Coach marks
 +++++++++++++++
