@@ -216,7 +216,7 @@ values on a scrolling reel, the person selects by scrolling to a value, a
 pattern that works naturally with both touch and pointer. Use the system picker
 rather than building a custom one, so the behaviour is familiar and accessible.
 
-.. figure:: /_static/images/luitk/dock-picker.png
+.. figure:: /_static/images/luitk/doc-picker.png
   :width: 40%
  
 Progress and loading
