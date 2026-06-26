@@ -223,6 +223,10 @@ Choose a size by its name and its role (a title is large, body text is medium, a
 subtitle is small), not by a pixel value. This keeps type consistent between your
 app and the rest of the system, and lets it scale correctly.
 
+.. figure:: /_static/images/luitk/luitk-Label.png
+  :width: 50%
+
+
 Iconography
 -----------
 
@@ -238,4 +242,6 @@ and they are governed by different rules:
   navigation (the icons in a header, on a button, in a list). Use the system's
   in-app icon set wherever a suitable icon exists, rather than drawing your own, so
   that a "search" or "delete" icon looks the same in your app as everywhere else.
+
+  
 

@@ -24,6 +24,22 @@ it can show two or more side by side, switching as the window is resized. See :d
 The panel is a surface that can be swiped in and out from an edge of the window. For most apps, the main view's built-in bottom toolbar is the right choice.
 
 
+.. grid:: 1 1 2 2
+   :gutter: 3
+
+   .. grid-item::
+      :columns: 12 12 4 4
+
+      .. figure:: /_static/images/luitk/doc-app-phone.png
+         :width: 100%
+
+   .. grid-item::
+      :columns: 12 12 8 8
+
+      .. figure:: /_static/images/luitk/doc-app-desktop.png
+         :width: 100%
+
+
 The header
 -----------
 
@@ -42,6 +58,8 @@ The sections strip sits below the header and provides flat navigation: a row of 
 
 The edit-mode toolbar appears below the header when an app enters an editing state. It holds the actions relevant to editing, like selecting, rearranging, or deleting content. It disappears when editing ends.
 
+.. figure:: /_static/images/luitk/doc-header-editmode.png
+  :width: 40%
 
 Actions
 -------
@@ -74,23 +92,43 @@ Lists and collection views
 
 The list item is the base element of a list. It defines no visual layout of its own, only behaviors So, leading actions revealed by swiping left (for negative or destructive choices), trailing actions revealed by swiping right (for positive ones), a selection state, a drag handle for reordering and dividers between items.
 
+.. figure:: /_static/images/luitk/luitk-ListItem.png
+  :width: 40%
+
 The list item layout helper builds a properly proportioned Lomiri list item on top of the list item, which contains a mandatory primary text slot, an optional subtitle, and configurable leading and trailing accessory slots. This is the right starting point for any standard list item. We recommend using this as the right starting point for any standard list item,
 because building a custom layout from scratch is harder to keep consistent.
 
+.. figure:: /_static/images/luitk/luitk-ListItemLayout.png
+  :width: 40%
+
 The slots layout is a horizontal arrangement of slots following Lomiri design standards. it is the mechanism the list item layout uses internally, and can be used directly for custom horizontal arrangements. 
+
+.. figure:: /_static/images/luitk/luitk-SlotsLayout.png
+  :width: 40%
 
 The progression indicator is a fixed chevron that sits in the trailing slot of a list item to signal that tapping will navigate deeper. Nothing else should share the slot it occupies.
 
-The list view is a specialist scrolling list that adds expand and collapse behaviour to items, automatically repositioning an expanding item when it opens and collapsing it when the person taps elsewhere.
-
-.. figure:: /_static/images/luitk/luitk-LomiriListView.png
+.. figure:: /_static/images/luitk/luitk-ProgressionSlot.png
   :width: 40%
 
+The list view is a specialist scrolling list that adds expand and collapse behaviour to items, automatically repositioning an expanding item when it opens and collapsing it when the person taps elsewhere.
 
+.. grid:: 2
+
+   .. grid-item::
+
+      .. figure:: /_static/images/luitk/luitk-LomiriListView.png
+         :width: 100%
+
+   .. grid-item::
+
+      .. figure:: /_static/images/luitk/doc-scrollview.png
+         :width: 100%
 
 The captions component is a twin-label column, with a primary and secondary label in a vertical stack, for use in slot-based horizontal layouts.
 
-
+.. figure:: /_static/images/luitk/luitk-Captions.png
+  :width: 40%
 
 Buttons and controls
 --------------------
@@ -100,31 +138,55 @@ using the semantic colours from :doc:`tokens`: green for positive, red for
 destructive, themed neutral otherwise. States are at-rest, pressed, focused (for
 pointer and keyboard), and disabled. A disabled action should be shown greyed
 rather than hidden so people learn it exists.
+
+.. figure:: /_static/images/luitk/luitk-Button.png
+  :width: 40%
  
 The combo button is a split control: a main button on the left triggers the
 primary action. A dropdown button on the right expands a panel showing additional
 options. Use it when one action is dominant and a set of related alternatives is
 occasionally needed, without committing permanent screen space to all of them.
+
+.. figure:: /_static/images/luitk/luitk-ComboButton.png
+  :width: 40%
  
 The switch toggles a single binary setting on or off. Use it for settings that
 take effect immediately. States are on, off, focused, and disabled.
  
+
+.. figure:: /_static/images/luitk/luitk-Switch.png
+  :width: 40%
+ 
+
 The checkbox allows selecting any combination from a set, or confirming a
 single choice such as accepting terms. The label must be unambiguously associated
-with the checkbox. ad.
+with the checkbox.
+
+.. figure:: /_static/images/luitk/luitk-CheckBox.png
+  :width: 40%
  
 Radio-style selection presents a set of mutually exclusive options, meaning that exactly
 one is always selected. Do not use this pattern for command actions. If the list is long and
 typeable, a text field is more appropriate.
+
+.. figure:: /_static/images/luitk/luitk-RadioSelection.png
+  :width: 40%
  
 The slider selects a value from a continuous range by dragging a thumb along a
 track. Use it for settings with a meaningful range (volume, brightness) rather than
 for precise value entry, where a text field is clearer.
+
+.. figure:: /_static/images/luitk/luitk-Slider.png
+  :width: 40%
  
 The option selector handles both single-value display and multi-choice
 expansion in one component. Collapsed, it shows the currently selected value while when
 expanded, it shows all options as a scrollable list. It can also be configured to
 always appear expanded.
+
+
+.. figure:: /_static/images/luitk/luitk-OptionSelector.png
+  :width: 40%
  
 Text input
 ----------
@@ -133,10 +195,16 @@ The single-line text field accepts one line of typed input. It supports
 validation, input masks, and password echo mode. Anatomy is the input area, an
 optional placeholder hint, and optional leading or trailing icons for actions like
 clearing or revealing a password. States are empty, focused, filled, and error.
+
+.. figure:: /_static/images/luitk/luitk-TextField.png
+  :width: 40%
  
 The multi-line text area accepts blocks of text. It scrolls its own content
 once it overflows, rather than growing without limit. Use it for notes, messages,
 and any input where the person might type more than a sentence.
+
+.. figure:: /_static/images/luitk/luitk-TextArea.png
+  :width: 40%
  
 Date, time, and value pickers
 ------------------------------
@@ -147,6 +215,9 @@ popover on a tablet or desktop where there is room. The picker itself presents
 values on a scrolling reel, the person selects by scrolling to a value, a
 pattern that works naturally with both touch and pointer. Use the system picker
 rather than building a custom one, so the behaviour is familiar and accessible.
+
+.. figure:: /_static/images/luitk/dock-picker.png
+  :width: 40%
  
 Progress and loading
 --------------------
@@ -155,12 +226,16 @@ The activity indicator is a spinning animation for tasks of unknown duration.
 Use it when something is happening but no proportion can be measured, such as a
 connection being established or a cache being refreshed. It should be visible for as
 long as the wait lasts and disappear immediately when it ends.
+
+.. figure:: /_static/images/luitk/luitk-ActivityIndicator.png
  
 The progress bar shows measurable progress as a filled track. A determinate
 bar should reach 100% and stop exactly once. If the final step is verifying
 success, allocate a fraction of the bar to that step rather than jumping to full
 and then waiting. An indeterminate progress bar uses an animation rather than a
 fill level, for tasks where proportion is unknown.
+
+.. figure:: /_static/images/luitk/luitk-ProgressBar.png
  
 Place the progress bar near the action that started it, so the person can see
 which operation is running.
@@ -225,5 +300,20 @@ system. It allows a component's visual style to be swapped at runtime through a
 style name or a custom style component, while still pulling colours and metrics
 from the active theme. Use this as the base if you are building a custom component
 that needs to remain theme-aware.
+
+.. grid:: 1 1 2 2
+   :gutter: 3
+
+   .. grid-item::
+      :columns: 12 12 4 4
+
+      .. figure:: /_static/images/luitk/doc-theme-light.png
+         :width: 100%
+
+   .. grid-item::
+      :columns: 12 12 8 8
+
+      .. figure:: /_static/images/luitk/doc-theme-dark.png
+         :width: 100%
  
 
