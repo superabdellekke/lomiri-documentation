@@ -305,13 +305,13 @@ that needs to remain theme-aware.
    :gutter: 3
 
    .. grid-item::
-      :columns: 12 12 4 4
+      :columns: 12 12 6 6
 
       .. figure:: /_static/images/luitk/doc-theme-light.png
          :width: 100%
 
    .. grid-item::
-      :columns: 12 12 8 8
+      :columns: 12 12 6 6
 
       .. figure:: /_static/images/luitk/doc-theme-dark.png
          :width: 100%
