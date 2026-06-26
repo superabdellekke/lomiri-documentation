@@ -25,9 +25,6 @@ the only kind that can act on (and accidentally interfere with) the system itsel
    updated as they appear.
 
 
-
-
-
 .. toctree::
    :maxdepth: 2
    :caption: HIG Contents:
