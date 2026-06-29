@@ -1,5 +1,7 @@
 # Lomiri Documentation
 
+-- note, Claude has been used for the configuration of Sphinx. It has not been used to write content. --
+
 Sphinx-based documentation for the **Lomiri** operating system shell. The
 project bundles two linked documents:
 
